@@ -6,7 +6,7 @@
 /*   By: lmarquar <lmarquar@student.42wolfsburg.de> +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/06/09 13:44:09 by lmarquar          #+#    #+#             */
-/*   Updated: 2021/06/28 13:30:16 by lmarquar         ###   ########.fr       */
+/*   Updated: 2021/06/28 14:17:39 by lmarquar         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -119,7 +119,7 @@ char	**ft_split(char const *s, char c)
 	}
 	res = dparray(st, c, &(size));
 	if (!res)
-		return (delete(res, -1));
+		return (delete(&st, -1));
 	res = finish(res, st, c, size);
 	free(st);
 	return (res);
